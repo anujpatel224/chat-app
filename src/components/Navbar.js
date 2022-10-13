@@ -7,7 +7,7 @@ import Logout from "./Logout.js";
 
 const style = {
   nav: `bg-gray-800 h-20 flex justify-between items-center p-4`,
-  heading: `text-white text-3xl`,
+  heading: `text-cyan-300 font-serif text-3xl  `,
   username: `text-white text-2xl`,
 };
 
@@ -16,10 +16,10 @@ const Navbar = () => {
 
   return (
     <div className={style.nav}>
-      <h1 className={style.heading}>Chat App</h1>
+      <h1 className={style.heading}>Gossip</h1>
       <h2 className={style.username}>
         {" "}
-        {user ? "Hey " + user.displayName + "😎" : ""}{" "}
+        {user ? "Hey " + user.displayName.split(' ')[0]: ""}{" "}
       </h2>
       {user ? <Logout /> : <Signin />}
     </div>
